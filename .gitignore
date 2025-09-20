@@ -36,5 +36,8 @@ env/
 .DS_Store
 Thumbs.db
 
+# Temporary files and other projects
+.temp/
+
 # Game files (keep high score)
 # highscore.txt is intentionally tracked
