@@ -1,6 +1,10 @@
 import pygame
 import random
 import numpy as np
+import os
+
+# Create .temp directory if it doesn't exist
+os.makedirs('.temp', exist_ok=True)
 
 pygame.init()
 pygame.mixer.init(frequency=22050, size=-16, channels=2, buffer=512)
