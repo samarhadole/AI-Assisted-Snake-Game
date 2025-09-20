@@ -2,6 +2,8 @@
 
 A feature-rich Snake game built with Python and Pygame, supporting both keyboard and joystick controls!
 
+> **🤖 Built with Amazon Q Developer**: This project was created by Samar using Amazon Q's AI-powered coding assistance. Samar had no prior Python knowledge when starting this project - it's a testament to the power of AI-assisted learning and development!
+
 ## 🎮 Features
 
 ### Gameplay
