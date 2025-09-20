@@ -39,7 +39,7 @@ move_sound.set_volume(0.1)  # Lower volume for movement
 
 # Load high score
 try:
-    with open('highscore.txt', 'r') as f:
+    with open('.temp/highscore.txt', 'r') as f:
         high_score = int(f.read())
 except:
     high_score = 0
@@ -226,7 +226,7 @@ while running:
         # Update high score
         if score > high_score:
             high_score = score
-            with open('highscore.txt', 'w') as f:
+            with open('.temp/highscore.txt', 'w') as f:
                 f.write(str(high_score))
         
         # Game over screen
