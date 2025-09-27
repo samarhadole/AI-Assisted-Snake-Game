@@ -106,21 +106,21 @@ while running:
     
     # Check joystick analog stick for movement (if joystick is connected)
     if joystick and not paused and not game_over:
-        # Get left analog stick values (usually axes 0 and 1)
+        # Get left analog stick values (axes 0 and 1)
         x_axis = joystick.get_axis(0)  # Left/Right
         y_axis = joystick.get_axis(1)  # Up/Down
         
         # Only respond to significant movement (deadzone)
-        if abs(x_axis) > 0.5 or abs(y_axis) > 0.5:
+        if abs(x_axis) > 0.3 or abs(y_axis) > 0.3:  # Lower threshold for better response
             if abs(x_axis) > abs(y_axis):  # Horizontal movement is stronger
-                if x_axis > 0.5 and direction != [-20, 0]:  # Right
+                if x_axis > 0.3 and direction != [-20, 0]:  # Right
                     direction = [20, 0]
-                elif x_axis < -0.5 and direction != [20, 0]:  # Left
+                elif x_axis < -0.3 and direction != [20, 0]:  # Left
                     direction = [-20, 0]
             else:  # Vertical movement is stronger
-                if y_axis > 0.5 and direction != [0, -20]:  # Down (joystick Y is inverted)
+                if y_axis > 0.3 and direction != [0, -20]:  # Down (joystick Y is inverted)
                     direction = [0, 20]
-                elif y_axis < -0.5 and direction != [0, 20]:  # Up
+                elif y_axis < -0.3 and direction != [0, 20]:  # Up
                     direction = [0, -20]
     
     if not paused and not game_over:
